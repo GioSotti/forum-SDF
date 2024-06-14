@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #424242;
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    margin-top: -60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.login-box {
+    background: #FFF;
+    padding: 100px 100px 50px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 300px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: -50px;
+}
+
+.user-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -100px;
+}
+
+h1 {
+    font-size: 25px;
+    text-align: center;
+    margin-top: -40px;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: -20px;
+}
+.form-group {
+    margin-bottom: 20px;
+    display: fle;
+    flex-direction: column;
+    width: 100%;
+}
+
+input[type="email"].form-control {
+    font-size: 16px;
+    outline: none;
+    width: calc(100% - 36px);
+    border: 2px solid #CCC;
+    padding: 16px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+input[type="email"].form-control:hover {
+    border: 2px solid #19e431;
+}
+
+input[type="email"].form-control:focus {
+    border: 2px solid #19e431;
+}
+
+input[type="email"].form-control:active {
+    border: 2px solid #19e431;
+}
+
+button {
+    outline: none;
+    background: #19e431;
+    color: #FFF;
+    padding: 16px;
+    display: block;
+    width: 100%;
+    border: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 5px 5px 5px #CCC;
+}
+
+.return {
+    color:#000000;
+    font-family:'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    padding-bottom: 30px;
+}
+
+.return:hover {
+    color: #19e431;
+}
+
+h2 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .login-box {
+        padding: 50px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .user-icon {
+        top: -70px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-top: -20px;
+        margin-bottom: 20px;
+    }
+
+    input[type="email"].form-control {
+        width: 100%;
+    }
+}

@@ -1,0 +1,89 @@
+[
+    {
+        "id": 1,
+        "type": "image",
+        "image": "media/preuve_1.webp",
+        "story": "Une fois, j'ai dragué une fille en boite alors que j'étais bourré..... c'était ma soeur",
+        "like": 0,
+        "lier": 1,
+        "dislike": 0,
+        "Commentaire": [
+            "pas cool ça m'est arrivé aussi #triste",
+            "#lenordc'estcool",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "Catégorie": [
+            "vdm",
+            "drole"
+        ]
+    },
+    {
+        "id": 2,
+        "type": "image",
+        "image": "media/preuve_2.jpg",
+        "story": "Trop bourré, je me suis endormi sur une table de pique nique !",
+        "like": 1,
+        "lier": 1,
+        "dislike": 0,
+        "Commentaire": [
+            "pas mal les bzez",
+            "drole ahah",
+            "",
+            "trop cool \r\n"
+        ],
+        "Catégorie": [
+            "vdm",
+            "hagraah"
+        ]
+    },
+    {
+        "id": 3,
+        "type": "image",
+        "image": "media/preuve_3.jpg",
+        "story": "Un jour, en rentrant à 8 h du matin chez moi, je me suis endormi sur la cuvette des WC et une personne ma surpris tout nu sur le trône... C'était ma mère...   : ((",
+        "like": 1,
+        "lier": 0,
+        "dislike": 2,
+        "Commentaire": [
+            "",
+            "",
+            "",
+            ""
+        ],
+        "Catégorie": [
+            "vdm"
+        ]
+    },
+    {
+        "id": 4,
+        "type": "image",
+        "image": "media/preuve_4.png",
+        "story": "Je me suis endormi sur un distributeur devant la banque , le reveil était bizzare , aprés avoir vu les cameras de surveillance \r\n\r\nun sdf m'est passé dessus...",
+        "like": 0,
+        "lier": 0,
+        "dislike": 1,
+        "Commentaire": [
+            "",
+            "coup dur",
+            "",
+            ""
+        ],
+        "Catégorie": [
+            "hagraah"
+        ]
+    }
+]

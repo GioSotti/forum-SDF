@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style-admin.css">
+</head>
+<body>
+<div class="header-rectangle">
+    <div class="logo">
+        <a href="index"><img src="images/sdf.svg" alt="Logo"></a>
+    </div>
+    <h1 class="title">ESPACE ADMINISTRATION</h1>
+</div>
+<h2 class="message">On te fait confiance pour enlever toutes les conneries</h2>
+
+<div class="sidebar">
+    <nav>
+        <ul>
+            <li><a href="#posts" onclick="toggleSections('posts')">Posts</a></li>
+            <br>
+            <li><a href="#commentaires" onclick="toggleSections('commentaires')">Commentaires</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="content">
+
+    <section id="posts" style="display: block;">
+        <h3>histoire
+            
+            <button class="delete-button">Supprimer</button>
+        </h3>
+    </section>
+
+    <section id="commentaires">
+        <h3>commentaires
+            
+            <button class="delete-button">Supprimer</button>
+        </h3>
+    </section>
+</div>
+<script src="js/script-admin.js"></script>
+
+</body>
+</html>

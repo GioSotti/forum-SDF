@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #424242;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background: #FFF;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 35%;
+  font-size: 70%;
+  border-radius: 5%;
+  margin-top: 3%;
+}
+
+.user-icon {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -100px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 8%;
+  margin-bottom: 4%;
+}
+
+.login {
+  width: 60%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input[type="text"].form-control,
+input[type="clé-admin"].form-control,
+input[type="password"].form-control {
+  font-size: 12px;
+  outline: none;
+  width: 100%;
+  border: 2px solid #CCC;
+  padding: 12px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  margin-top: -8px;
+}
+
+button {
+  outline: none;
+  background: #19e431;
+  color: #FFF;
+  padding: 16px;
+  display: block;
+  width: 100%;
+  border: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+a {
+  color: #19e431;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url('/images/view.png');
+  background-size: cover;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  margin-top: -4px;
+}
+
+.password-hide {
+  background-image: url('/images/hide.png');
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-control {
+  padding-right: 35px;
+  box-sizing: border-box;
+}
+
+.form-control:focus+.password-toggle {
+  opacity: 1;
+}
+
+/* BAS DE PAGE */
+
+.return {
+  color: #000000;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-decoration: none;
+}
+
+.return:hover {
+  color: #19e431;
+}
+
+h2 {
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .login-box {
+    padding-top: 10px;
+    padding-bottom: 20px;
+      width: 80%;
+  }
+}

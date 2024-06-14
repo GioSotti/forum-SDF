@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDF - Connexion</title>
+    <link rel="stylesheet" href="css/style-connexion.css">
+    <script src="js/script-showpassword.js"></script>
+
+    <!-- BIBLIOTHEQUES -->
+
+</head>
+
+<body>
+<div style="padding-top: 60px;"></div>
+
+<div class="container">
+    <div class="login-box">
+        <div class="user-icon">
+            <img src="images/sdf100So.svg" height="150px" width="180px">
+        </div>
+        <h1>CONNEXION</h1>
+        <form class="login" action="/connexion" method="POST">
+            <div class="form-group">
+                <input type="text" placeholder="Pseudo / E-mail" id="username" name="username" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Mot de passe" id="password" name="password" class="form-control">
+                <span class="password-toggle" onclick="togglePasswordVisibility('password')"></span>
+            </div>
+           
+            <div class="form-group">
+                <a href="mdpperdu">Mot de passe oublié</a>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="full-btn">CONNEXION</button>
+            </div>
+            {{if ne .ErrorMessage ""}}
+<div class="error" style="color: red;">{{.ErrorMessage}}</div>
+{{end}}
+            <div class="form-group">
+                <p>Quoi t'es pas encore inscris? <a href="inscription">Inscription</a></p>
+            </div>
+            <div class="form-group">
+                <h2><a href="index" class="return">Retour à l'accueil </a></h2>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+
+</html>

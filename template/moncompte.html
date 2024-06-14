@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon compte - Soirée De Folie</title>
+    <link rel="stylesheet" type="text/css" href="css/style-moncompte.css">
+    <script src="/js/script-moncompte.js"></script> 
+    
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index"><img src="images/sdf.svg" alt="Logo"></a>
+    </div>
+    <h1>Soirée De Folie</h1>
+    <nav>
+      <ul>
+          <li><a href="formulaire">+ Nouvel article</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="#account" onclick="toggleSections('account')">Mon compte</a></li>
+        <br>
+        <li><a href="#posts" onclick="toggleSections('posts')">Liste des articles</a></li>
+      </ul>
+    </nav>    
+  </div>
+
+  <div class="content">
+
+    <section id="account">
+      <div class="account-content">
+      <h2>Mon compte</h2>
+      <form id="pseudo-form">
+        <label for="pseudo">Mon pseudo : {{.Username}}</label>
+      </form>
+      <form id="email-form">
+        <label for="email">Mon mail: {{.Email}}</label>
+     
+      </form>
+      <a href="/logout">
+      <button>Se déconnecter</button>
+    </a>
+    </div>
+    </section>
+
+
+  <section id="posts" class="hidden">
+    <div class="account-content">
+      <h2>Mais qu'est ce que j'ai posté ?</h2>
+      <div class="rectangle">
+        <img src="chemin_de_votre_image.jpg" alt="Image" class="imagerec">
+        <p class="texte">Votre texte ici</p>
+      </div>
+    </div>
+    </section>
+
+  </div>
+</body>
+</html>

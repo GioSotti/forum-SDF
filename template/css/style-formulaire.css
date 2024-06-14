@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-color: #424242;
+    height: 92vh;
+    width: 100%;
+}
+    
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+    
+
+.login-box {
+    background: #fff;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 35%;
+    font-size: 80%;
+    border-radius: 5%;
+    margin-top: 80px;
+  }
+    
+.user-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -100px;
+}
+    
+h1 {
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+    
+.login {
+    width: 80%;
+}
+    
+.form-group {
+    margin-bottom: 6%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+    
+button {
+    outline: none;
+    background: #19e431;
+    color: #FFF;
+    padding: 16px;
+    display: block;
+    width: 100%;
+    border: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+    
+button:hover {
+    box-shadow: 5px 5px 5px #CCC;
+}
+    
+textarea {
+    width: 100%;
+    height: 120px;
+}
+    
+.tags-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+    
+.tags-group label {
+    margin-left: 15px;
+    margin-top: 8%;
+}
+    
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+    
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+    
+.checkbox-item input[type="checkbox"] {
+    margin-right: 5px;
+}
+    
+
+.checkbox-group input[type="checkbox"] {
+    display: none;
+}
+    
+.checkbox-group input[type="checkbox"] + label {
+    padding: 3% 3%;
+    border: 1px dashed #ccc;
+}
+    
+.checkbox-group input[type="checkbox"]:checked + label {
+    border: 1px solid #19e431;
+}
+    
+  @media (max-width: 1000px) {
+    .login-box {
+        padding: 50px;
+        width: 60%;
+    }
+}
+.return {
+    color: #000000;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    padding-bottom: 30px;
+}
+        
+.return:hover {
+    color: #19e431;
+}
+        
+h2 {
+    margin-top: 40px;
+    text-align: center;
+}

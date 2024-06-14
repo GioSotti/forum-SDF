@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDF - Inscription</title>
+    <link rel="stylesheet" href="css/style-inscription.css">
+    <script src="js/script-showpassword.js"></script>
+
+    <!-- BIBLIOTHEQUES -->
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <div class="user-icon">
+        <img src="images/sdf100So.svg" height="150px" width="180px">
+      </div>
+  
+      <h1>INSCRIPTION</h1>
+      <form class="login" method="POST" action="/inscription">
+        <div class="form-group">
+          <input type="text" placeholder="Pseudo" name="username" id="username" class="form-control">
+        </div>
+  
+        <div class="form-group">
+          <input type="text" placeholder="E-Mail" name="email" id="email" class="form-control">
+        </div>
+  
+        <div class="form-group">
+          <input type="password" placeholder="Mot de passe" name ="password" id="password" class="form-control">
+          <span class="password-toggle" onclick="togglePasswordVisibility('password')"></span>
+        </div>
+  
+        <div class="form-group">
+          <input type="password" placeholder="Confirmer le mot de passe" name="confirm-password" id="confirm-password" class="form-control">
+          <span class="password-toggle" onclick="togglePasswordVisibility('confirm-password')"></span>
+        </div>
+  
+        <div class="form-group">
+          <input type="password" placeholder="Clé admin (si t'en a une couillon)" name ="admin-key" id="admin-key" class="form-control">
+          <span class="password-toggle" onclick="togglePasswordVisibility('admin-key')"></span>
+        </div>
+        <div class="form-group">
+          <button class="full-btn">INSCRIPTION</button>
+        </div>
+        {{if ne .ErrorMessage ""}}
+<div class="error" style="color: red;">{{.ErrorMessage}}</div>
+{{end}}
+        <div class="form-group">
+          <p>Déjà enregistré ? <a href="connexion">Connexion</a></p>
+        </div>
+        <div class="form-group">
+          <h2><a href="index" class="return">Retour à l'accueil </a></h2>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDF - Accueil</title>
+    <link rel="stylesheet" href="css/style-index.css">
+    <script src="js/script-index.js"></script>
+    <!-- BIBLIOTHEQUES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+</head>
+
+<body>
+
+    <div>
+        <div class="header-main">
+            <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+                <div class="container"><a class="navbar-brand" href="#" title="Soirée De Folie hein pas autre chose !">SDF</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse"
+                        id="navcol-1">
+                        <ul class="nav navbar-nav">
+                            <form action="/index" method="post">
+                                <li class="dropdown">
+                                  <a class="dropdown-toggle nav-link dropdown-toggle" href="#" onclick="toggleDropdown(event)">Filtrer</a>
+                                  <div class="dropdown-menu" id="dropdownMenu" role="menu">
+                                    <button class="dropdown-item" type="submit" name="dropdown" value="vdm">VDM</button>
+                                    <button class="dropdown-item" type="submit" name="dropdown" value="vomis">Vomis</button>
+                                    <button class="dropdown-item" type="submit" name="dropdown" value="drole">Drôle</button>
+                                    <button class="dropdown-item" type="submit" name="dropdown" value="hagraah">HAAGRAH</button>
+                                  </div>
+                                </li>
+                              </form>
+                        </ul>
+                        {{if .Connected}}
+                        <form class="form-inline mr-auto" action="/index" method="post">
+                            <div class="form-group">
+                                <label for="search-field" title="Tu cherches de la m**** ?">
+                                    <i class="fa fa-search"></i>
+                                </label>
+                                <input class="form-control search-field" type="search" name="search" id="search-field" placeholder="Rechercher..." autocomplete="off">
+                            </div>
+                        </form>
+                        <span class="navbar-text">Connecté en tant que: {{.Username}}</span>
+                        <a class="btn btn-light action-button" role="button" title="On est a la maison la ou quoi" href="account">Mon Compte</a>
+                    {{else}}
+                    <form class="form-inline mr-auto" action="/index" method="post">
+                        <div class="form-group">
+                            <label for="search-field" title="Tu cherches de la m**** ?">
+                                <i class="fa fa-search"></i>
+                            </label>
+                            <input class="form-control search-field" type="search" name="search" id="search-field" placeholder="Rechercher..." autocomplete="off">
+                        </div>
+                    </form>
+                        <span class="navbar-text">
+                            <a href="connexion" title="j'aime bien !" class="login">T'as un compte</a>
+                        <a class="btn btn-light action-button" role="button" title="fada que t'y es !" href="inscription">Quoi, t'en as pas ?</a>
+                    </span>
+                    
+                    
+                        {{end}}
+                </div>
+            </nav>
+            <div class="container hero">
+                <div class="row">
+                    <div class="col-12 col-lg-6 col-xl-5 offset-xl-1">
+                        <h1>Soirée De Folie</h1>
+                        <p>Tu sors de soirée, tu te souviens d'une anecdote (déjà bravo, t'étais pas trop bourré), tu veux la partager avec d'autres alcooliques ? </p><button class="btn btn-light btn-lg action-button" type="button" title="Clique, il ne faut pas avoir peur !"><a href="#content" style="color: white;">Allons-y quoi !</a></button>
+</div>
+                    <div
+                        class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-block bottle-holder">
+                        <div class="bottle-mockup"><img src="images/sdf.svg" class="device">
+                            <div class="screen"></div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+   
+    {{range .Stories}}
+
+    <div class="content" id="content">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                  <div class="card-container">
+                    <div class="logo-card"> <img src="images/sdf.svg" alt="logo"></div>
+                      <div class="ellipse">
+                        <span class="ellipse-text-top">N°{{.ID}}</span>
+                        <div class="text">
+                        {{.Story}}</div>
+                      <span class="ellipse-text-bottom">#SDF</span>
+                  
+                      </div>
+                      <div class="image-container">
+                        <div class="image-item">
+                        <form method="POST">
+                            <input type="hidden" name="id" value="{{.ID}}">
+                        <button type="submit" name="style" value="like">
+                          <img src="images/image1.png" alt="Image 1" class="button-card">
+                        </button>
+                        </form>
+                          <span class="image-number">{{.Like}}</span>
+                        </div>
+                        <div class="image-item">
+                            <form method="POST">
+                                <input type="hidden" name="id" value="{{.ID}}">
+                            <button type="submit" name="style" value="lier">
+                          <img src="images/image2.png" alt="Image 2" class="button-card">
+                        </button>
+                            </form>
+                          <span class="image-number">{{.Lier}}</span>
+                        </div>
+                        <div class="image-item">
+                            <form method="POST">
+                                <input type="hidden" name="id" value="{{.ID}}">
+                                <button type="submit" name="style" value="dislike">
+                            <img src="images/vomis.png" alt="Image 3" class="button-card">
+                             </button>
+                                    </form>
+                            <span class="image-number">{{.Dislike}}</span>
+                          </div>
+
+
+
+                      </div>
+                    </div>
+              </div>
+              <div class="flip-card-back">
+                  <div class="card-container">
+                      <div class="proof">
+                        <div class="proof">
+                            {{if eq .Type "image"}}
+                                <img src="{{.Image}}" alt="Image">
+                            {{else if eq .Type "video"}}
+                                <video src="{{.Image}}" controls></video>
+                            {{end}}
+                        </div>
+                        
+                      </div>
+                    </div>
+              </div>
+            </div>
+            <div style="padding-top: 10px;"></div>
+             </div>
+            </div>
+        </div>
+    </div>
+    {{end}}
+        
+
+
+
+  
+</body>
+</html>

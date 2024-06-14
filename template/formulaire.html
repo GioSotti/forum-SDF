@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDF - Formulaire</title>
+    <link rel="stylesheet" href="css/style-formulaire.css">
+    <!-- BIBLIOTHEQUES -->
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="user-icon">
+                <img src="images/sdf100So.svg" height="150px" width="180px">
+            </div>
+            <h1>FORMULAIRE</h1>
+            <form class="login" action="/formulaire" method="POST" enctype="multipart/form-data">
+                <div class="form-group tags-group">
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="difficulty" id="vdm" value="vdm">
+                            <label for="vdm">VDM</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="difficulty" id="vomis" value="vomis">
+                            <label for="vomis">VOMIS</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="difficulty" id="drole" value="drole">
+                            <label for="drole">DROLE</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="difficulty" id="hagraah" value="hagraah">
+                            <label for="hagraah">HAGRAAH</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <textarea name="story" placeholder="Saisissez ici..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Montre nous ta preuve : 
+                        <input type="file" name="media" id="media" accept="image/*, video/*">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="full-btn">POST</button>
+                </div>
+                <h2><a href="index" class="return">Retour à l'accueil </a></h2>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

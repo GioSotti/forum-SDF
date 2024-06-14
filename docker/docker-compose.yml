@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: forum
+      POSTGRES_PASSWORD: forum
+      POSTGRES_DB: forum
+    ports:
+      - "5432:5432"
+    volumes:
+      - forum-sdf-vol:/var/lib/postgresql/data
+    container_name: forum_db
+
+volumes:
+  forum-sdf-vol:
